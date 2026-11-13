@@ -1,0 +1,5 @@
+name: "aster_leverage_trading"
+title: "Aster Leverage Trading"
+description: "Trade perpetual futures on Aster with isolated margin, sized against minimum quantity and free margin, and with stop loss and take profit attached."
+category: "Finance"
+include_in_prompt: false
