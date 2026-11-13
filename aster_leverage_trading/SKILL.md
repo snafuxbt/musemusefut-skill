@@ -8,7 +8,7 @@ the agent creates the wallet, the agent key, and the deposit — see
 
 - Trade on Aster, a perpetual futures DEX on BSC, using the account holder's own wallet and their own USDT.
 
-- Deposit USDT to the Aster vault contract (0x128463A60784c4D3f46c23Af3f65Ed859Ba87974) with broker 0 for futures, after approving the USDT spend from the wallet, and verify the vault address against Aster's current documentation before the first deposit.
+- Deposit USDT to Aster futures (broker 0), after approving the USDT spend from the wallet. Find the current deposit address in Aster's official documentation and verify it before the first deposit — never trust an address from a chat or a screenshot.
 
 - Approve a separate agent key from the main wallet with an EIP-712 signature, and give that key perpetual-trading permission only, never withdrawal permission.
 

@@ -28,8 +28,8 @@ What the agent did:
    cannot withdraw.
 4. Swapped BNB into USDT, then transferred the USDT to the
    trading wallet.
-5. Deposited the USDT to the Aster vault contract (broker 0 =
-   futures).
+5. Deposited the USDT to Aster futures (broker 0), using the
+   deposit address from Aster's official documentation.
 6. Switched the account to Single-Asset mode and set 10x
    isolated leverage.
 7. Installed a monitor that checks every 5 minutes and reports
@@ -78,12 +78,10 @@ Aster is a perpetual futures DEX on BSC: no KYC, wallet-only.
 Minimum order $5 notional, taker fee 0.04%.
 
 1. Connect the wallet to the Aster app/web (asterdex.com).
-2. Deposit USDT to the Aster vault contract with broker 0
-   (futures). Vault address:
-   `0x128463A60784c4D3f46c23Af3f65Ed859Ba87974`
-   VERIFY this address in Aster's official documentation before
-   your first deposit — never trust an address from a chat or a
-   screenshot.
+2. Deposit USDT to Aster futures (broker 0). Find the current
+   deposit address in Aster's official documentation and verify
+   it before your first deposit — never trust an address from a
+   chat or a screenshot.
 3. The flow: approve the USDT spend from the wallet first, then
    deposit. Once in, the USDT balance can be used to open long
    or short positions.
