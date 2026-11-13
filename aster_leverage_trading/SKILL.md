@@ -30,7 +30,7 @@
 
 - Compare required margin with free margin before you place the order and skip the coin when the minimum quantity forces leverage above the level you intended.
 
-- Remember that a 0.001 BTC minimum quantity is about 76 dollars of notional near a 76000 dollar price and that size forces about 40x leverage on about 1.90 dollars of margin.
+- Remember that a 0.001 BTC minimum quantity is about 76 dollars of notional near a 76000 dollar price, so on a small margin it can force leverage far above the plan — check the forced leverage before you place the order.
 
 - Check the estimated liquidation price before you place the order and skip the trade when liquidation sits closer than the stop loss.
 

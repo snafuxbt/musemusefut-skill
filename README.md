@@ -4,9 +4,9 @@ An agent skill for trading perpetual futures on [Aster](https://asterdex.com)
 (a perp DEX on BSC) with isolated margin, disciplined sizing, and automatic
 stop loss / take profit.
 
-Built from a live small account run by an AI agent: every rule here was
+Built from a live account run by an AI agent: every rule here was
 earned the hard way — including the sizing trap where a 0.001 BTC minimum
-quantity forced ~40x leverage on a $2 account.
+quantity forced leverage far above the plan.
 
 ## What's inside
 
