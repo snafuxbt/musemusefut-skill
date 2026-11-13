@@ -7,7 +7,7 @@ This guide contains **no private keys, seed phrases, or wallet
 addresses belonging to anyone**. Everything here is steps and rules —
 you use your own wallet and your own funds.
 
-## Path 1 — The agent does everything (how we did it)
+## Path 1 — The agent does everything, fully automatically (how we did it)
 
 This is what actually happened in our setup. The user did **not**
 create a wallet, did **not** register an account, and did **not**

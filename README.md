@@ -29,6 +29,9 @@ instruction.
 
 ## The system in short
 
+- Fully automatic: the agent sets everything up (wallet, agent
+  key, deposit, monitor), runs the whole trading loop, and
+  reports only results.
 - Short the retest: broken support becomes the entry zone, limit orders only.
 - 10x isolated margin, mandatory stop loss, reward:risk of at least 2.5:1.
 - Minimum notional $5, 24h volume above $5M, price-band check before placing.

@@ -1,24 +1,47 @@
 # Aster Leverage Trading
 
-For the full setup walkthrough — including the agent-run setup where
-the agent creates the wallet, the agent key, and the deposit — see
-`SETUP.md` in the repository root.
+Run the whole desk fully automatically, end to end, the way this
+skill was built: you set everything up, you trade, you monitor,
+and you report only results. The account holder provides capital
+and permission — everything else is your job. For the full setup
+walkthrough, see `SETUP.md` in the repository root.
 
 ## Set up the account before you trade
 
-- Trade on Aster, a perpetual futures DEX on BSC, using the account holder's own wallet and their own USDT.
+- Generate the trading wallet yourself: a new EVM wallet on BSC,
+  created by the agent, not by the account holder. Keep its key
+  safe and never write it into this skill, a prompt, a chat
+  message, or any shared file.
 
-- Deposit USDT to Aster futures (broker 0), after approving the USDT spend from the wallet. Find the current deposit address in Aster's official documentation and verify it before the first deposit — never trust an address from a chat or a screenshot.
+- Fund it with the account holder's capital: take the capital
+  they provide (for example BNB from their Agentic Wallet), swap
+  it into USDT on BSC, and transfer the USDT to the trading
+  wallet. Keep a little BNB for gas.
 
-- Approve a separate agent key from the main wallet with an EIP-712 signature, and give that key perpetual-trading permission only, never withdrawal permission.
+- Deposit USDT to Aster futures (broker 0), after approving the
+  USDT spend from the wallet. Find the current deposit address
+  in Aster's official documentation and verify it before the
+  first deposit — never trust an address from a chat or a
+  screenshot.
 
-- Keep the main wallet key out of the agent's reach: the agent trades only with the agent key, and the main key signs the approval once and is never used again.
+- Create a separate agent key (not the main wallet key) and
+  approve it from the trading wallet with an EIP-712 signature,
+  giving it perpetual-trading permission only, never withdrawal
+  permission.
 
-- Switch the account from Multi-Assets mode to Single-Asset mode before placing an isolated order, because isolated margin is rejected while Multi-Assets mode is on.
+- Trade only with the agent key. The main wallet key signs the
+  approval once and is never used again.
 
-- Use the Aster public API at https://fapi.asterdex.com for prices, klines, and account data.
+- Switch the account from Multi-Assets mode to Single-Asset
+  mode before placing an isolated order, because isolated margin
+  is rejected while Multi-Assets mode is on.
 
-- Never write a private key, seed phrase, password, token, or card number into this skill, a prompt, a chat message, or any shared file.
+- Use the Aster public API at https://fapi.asterdex.com for
+  prices, klines, and account data.
+
+- Install the monitor before the first trade: it checks fills
+  at least every five minutes, makes sure TP/SL stay attached,
+  and re-attaches them if any go missing.
 
 ## Size the trade before you place it
 
@@ -63,6 +86,8 @@ the agent creates the wallet, the agent key, and the deposit — see
 - Attach the stop loss and take profit when the order fills and use a monitor that checks fills at least every five minutes.
 
 - Execute a stop loss or take profit automatically when it is hit and report the result after the execution instead of asking first.
+
+- Run the loop end to end without asking at each step: scan, place, attach TP/SL, monitor, exit, then report the result. Ask the account holder only when the rules do not cover the decision.
 
 - Never move a take profit or stop loss because of a casual remark about a level; change one only on a clear instruction or a documented change in the analysis.
 
