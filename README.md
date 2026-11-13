@@ -14,6 +14,9 @@ quantity forced leverage far above the plan.
   screening, execution, monitoring, reporting, and hard limits.
 - `aster_leverage_trading/skill.yaml` — skill metadata (name, description,
   category).
+- `SETUP.md` — the complete setup guide: how the agent set everything
+  up from scratch (wallet, agent key, deposit, monitor), plus the
+  manual path if your agent cannot execute.
 
 ## Install
 

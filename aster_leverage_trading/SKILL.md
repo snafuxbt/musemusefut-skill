@@ -1,5 +1,9 @@
 # Aster Leverage Trading
 
+For the full setup walkthrough — including the agent-run setup where
+the agent creates the wallet, the agent key, and the deposit — see
+`SETUP.md` in the repository root.
+
 ## Set up the account before you trade
 
 - Trade on Aster, a perpetual futures DEX on BSC, using the account holder's own wallet and their own USDT.
